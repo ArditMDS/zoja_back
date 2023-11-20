@@ -44,11 +44,36 @@
       <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/dbal" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/zoja_back/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
