@@ -64,6 +64,17 @@
       <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/deprecations" />
       <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/zoja_back/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/zoja_back/vendor/symfony/translation-contracts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

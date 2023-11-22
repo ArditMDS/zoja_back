@@ -6,9 +6,13 @@ use App\Repository\UsersRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
-class Users
+#[UniqueEntity(fields: ["email", "authentification_name"], message: "This email or authentication name is already in use.")]
+class Users implements PasswordAuthenticatedUserInterface, UserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -21,13 +25,13 @@ class Users
     #[ORM\Column(length: 255)]
     private ?string $last_name = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
     private ?string $authentification_name = null;
 
     #[ORM\OneToMany(mappedBy: 'author', targetEntity: Post::class)]
@@ -38,6 +42,9 @@ class Users
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $profile_picture = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $roles = null;
 
     public function __construct()
     {
@@ -178,6 +185,31 @@ class Users
     public function setProfilePicture(?string $profile_picture): static
     {
         $this->profile_picture = $profile_picture;
+
+        return $this;
+    }
+
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // Ensure every user at least has ROLE_USER
+        $roles[] = $this->roles;
+        return array_unique($roles);
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getUserIdentifier(): string
+    {
+        return $this->email;
+    }
+
+    public function setRoles(string $roles): static
+    {
+        $this->roles = $roles;
 
         return $this;
     }
