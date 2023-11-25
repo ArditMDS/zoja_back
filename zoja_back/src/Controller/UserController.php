@@ -17,6 +17,13 @@ class UserController extends AbstractController
     public function index(EntityManagerInterface $entityManager,UserPasswordHasherInterface $passwordHasher,Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
+        $verifyEmail = $entityManager->getRepository(Users::class)->findOneBy(['email' => $data['email']]);
+        $verifyId = $entityManager->getRepository(Users::class)->findOneBy(['authentification_name' => $data['auth_name']]);
+        if($verifyEmail) {
+            return new JsonResponse(['message'=>'Votre email est déja utilisé', 'code_response'=>Response::HTTP_BAD_REQUEST]);
+        } else if($verifyId) {
+            return new JsonResponse(['message'=>'Votre ID est déja utilisé', 'code_response'=>Response::HTTP_BAD_REQUEST]);
+        }
         $user = new Users();
         $user->setAuthentificationName($data['auth_name']);
         $user->setFirstName($data['first_name']);
