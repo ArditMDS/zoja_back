@@ -43,8 +43,8 @@ class Users implements PasswordAuthenticatedUserInterface, UserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $profile_picture = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $roles = null;
+    #[ORM\Column(type: 'json', nullable: true)]
+    private ?array $roles = [];
 
     public function __construct()
     {
@@ -191,10 +191,9 @@ class Users implements PasswordAuthenticatedUserInterface, UserInterface
 
     public function getRoles(): array
     {
-        $roles = $this->roles;
-        // Ensure every user at least has ROLE_USER
+        $roles = $this->roles ?? [];
         $roles[] = $this->roles;
-        return array_unique($roles);
+        return $roles;
     }
 
     public function eraseCredentials()
@@ -207,7 +206,7 @@ class Users implements PasswordAuthenticatedUserInterface, UserInterface
         return $this->email;
     }
 
-    public function setRoles(string $roles): static
+    public function setRoles(array $roles): static
     {
         $this->roles = $roles;
 

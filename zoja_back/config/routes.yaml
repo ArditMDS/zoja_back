@@ -1,7 +1,8 @@
+# C:\wamp64\www\zoja_back\zoja_back/config/routes.yaml
+
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
-    api_login_check:
-        path: /api/login_check
+    resource: '../src/Controller/'
+    type: annotation
+
+api_login_check:
+    path: '/api/login_check'
