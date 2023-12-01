@@ -1,0 +1,13 @@
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+  "auth_name": "arditodéé2580331",
+  "first_name": "Ardit",
+  "last_name": "Mataj",
+  "email": "mataj.arditodfefeffe222@gmail.com",
+  "password": "password",
+  "roles": "client"
+}
+
+###

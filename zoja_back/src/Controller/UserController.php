@@ -33,7 +33,6 @@ class UserController extends AbstractController
         $newPassword = $data['password'];
         $hashedPass = $passwordHasher->hashPassword($user, $newPassword);
         $user->setPassword($hashedPass);
-
         $entityManager->persist($user);
         $entityManager->flush();
 
