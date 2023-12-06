@@ -191,8 +191,7 @@ class Users implements PasswordAuthenticatedUserInterface, UserInterface
 
     public function getRoles(): array
     {
-        $roles = $this->roles ?? [];
-        $roles[] = $this->roles;
+        $roles = is_array($this->roles) ? $this->roles : [];
         return $roles;
     }
 

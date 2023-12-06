@@ -1,13 +1,9 @@
-POST http://localhost:8000/register
-Content-Type: application/json
+POST http://localhost:8000/api/me
+Content-Type: application/json,
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDE3NjAxMTcsImV4cCI6MTcwMTc2MzcxNywicm9sZXMiOnsicm9sZSI6IkNMSUVOVCIsIjAiOnsicm9sZSI6IkNMSUVOVCJ9fSwiZW1haWwiOiJtYXRhai5hcmRpdG9kQGdtYWlsLmNvbSJ9.VLDelcMBx1pTObgKOe1jdIv6is0U7c6xAQ3py7244YbWLcfO_0c9nEXxmqyi8o_Jy6rySB8KXl7zI-aSDkj09A4DTy0SmVoDL8S39mOz1LonCxIKKaKCNnuSCHJ8OUl_9XDkb_k2a_1eqgOGCe7gZElRywmG109-BZsJ58Wl4TuF6nh4FbXj_UgS00R1XCRCyYLNIzPKZRtse1srGACAZaVLUIeEvBF0nYbbgq56n0jUxi1_FK1eAKfoHTlY_TNsYW0qxAScoze47h263uxNcBRsZKzIcquma97d6m12z_o8N0xEDnTUFfiKt7I6EImh26RrShDVO4F0NmaM0xopYg
 
 {
-  "auth_name": "arditodéé2580331",
-  "first_name": "Ardit",
-  "last_name": "Mataj",
-  "email": "mataj.arditodfefeffe222@gmail.com",
-  "password": "password",
-  "roles": "client"
+"email" : "mataj.arditod@gmail.com"
 }
 
 ###
